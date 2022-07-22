@@ -1,0 +1,275 @@
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap');
+
+$footer-font: 'Montserrat', sans-serif;
+$global-font: 'Poppins', sans-serif;
+$logo-font: 'Heebo', sans-serif;
+$global-color: #333333;
+$paragraph-color: #4F4F4F;
+$light-color: #828282;
+$ultralight-color: #BDBDBD;
+$hightlight-color: #EB5757;
+$input-bg: #F2F2F2;
+$button-bg: #2D9CDB;
+$button-text: #FFFFFF;
+$service-button-bg: #E0E0E0;
+$footer-bg: #100E1D;
+$frontend-icon: #27AE60;
+
+@mixin flexible ($width,$direction,$alignx,$aligny) {
+    width: $width;
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: nowrap;
+    justify-content: $alignx;
+    align-items: $aligny;
+}
+@mixin grid-me ($width,$cols,$rows,$colsw,$rowsw,$gap) {
+    width: $width;
+    display: grid;
+    grid-template-columns: repeat($cols,$colsw);
+    grid-template-rows: repeat($rows,$rowsw);
+    grid-gap: $gap;
+}
+
+.Body {
+    color: $global-color;
+    font-family: $global-font;
+    font-size: 18px;
+    width: 100vw;
+    margin: 0 auto;
+}
+// ----------------------  HEADER  ---------------------
+.Header {
+    @include flexible(100vw, row, space-between, center);
+    width: 90%;
+    max-width: 1650px;
+    padding: 2em 0;
+    margin: 0 auto;
+}
+.HeaderLogo {
+    margin: 0;
+    font-family: $logo-font;
+    font-weight: 800;
+    font-size: 2em;
+}
+.MenuDesktop {
+    @include flexible(auto, row, end, center);
+    font-size: 500;
+}
+.MenuResponsive {
+    display: block;
+    @media (min-width: 1000px) {
+        display: none;
+    }
+}
+.MenuDesktop {
+    display: none;
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+}
+.CheckMenu {
+    visibility: hidden;
+    &:checked ~ .MenuContainer {
+        display: block;
+    }
+    &:checked ~ .LabelMenu {
+        background-image: url("../assets/menu-close.svg");
+    }
+}
+.LabelMenu {
+    position: relative;
+    right: 0;
+    bottom: 7px;
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+    z-index: 3;
+    background-image: url("../assets/menu-open.svg");
+    background-repeat: none;
+    background-size: cover;
+}
+.MenuContainer {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+}
+.Menu {
+    @include flexible(auto, column, center, center);
+    width: 100%;
+    height: 100%;
+}
+.MenuElem {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    @media (min-width: 1000px) {
+        margin-bottom: 0;
+        padding-bottom: 4px;
+        margin-left: 2.8em;
+        font-size: 1.1em;
+    }
+}
+// ----------------------  HEADER  --------------------- 
+.WeCreate {
+    padding: 2em;
+    width: 95%;
+    max-width: 1650px;
+    margin: 0 auto;
+}
+.SectionHeader,
+.H2,
+.Paragraph,
+.EmailCTA {
+    padding-left: 40px;
+    width: 80%;
+    @media (min-width: 1000px) {
+        padding-left: 200px;
+        width: 45%;
+    } 
+}
+.CTA {
+    color: $button-bg;
+    font-family: $global-font;
+    font-weight: 500;
+    font-size: .7em;
+    @media (min-width: 1000px) {
+        font-size: 1em;
+    }
+}
+.H1,
+.H2 {
+    color: $global-color;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    @media (min-width: 1000px) {
+        margin: 25px 0;
+        font-size: 2.3em;
+    }
+}
+.HeroImage {
+    margin: 25px 0;
+    & img {
+        border-radius: .5em;
+    }
+}
+.Paragraph,
+.ServiceParagraph {
+    color: $paragraph-color;
+    font-weight: 400;
+    font-size: .8em;
+    margin: 25px 0;
+}
+.EmailCTA {
+    @include flexible(45%,column,start,start);
+}
+.InputWrapper {
+    @include flexible(100%,row,space-between,center);
+    background-color: $input-bg;
+    padding: .2em;
+    border-radius: .5em;
+    margin-top: .5em;
+}
+.CTAInput {
+    width: 65%;
+    background-color: $input-bg;
+    color: $ultralight-color;
+    border-radius: .5em;
+    padding: .8em;
+    font-size: .8em;
+    &::placeholder {
+        color: $ultralight-color;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.CTAButton {
+    width: 30%;
+    border-radius: .5em;
+    background-color: $button-bg;
+    color: $button-text;
+    padding: 10px;
+}
+.CTAText {
+    color: $light-color;
+    font-weight: 500;
+    font-size: .55em;
+}
+// --------------------  SERVICES  -------------------
+.Services {
+    width: 75%;
+    max-width: 1450px;
+    margin: 60px auto 20px auto;
+}
+.ServicesHeader {
+    width: 30%;
+}
+.ServicesH2 {
+    color: $global-color;
+    font-weight: 500;
+    line-height: 1.3em;
+    /* font-size: 1.5em;
+    line-height: 1.4em; */
+    @media (min-width: 1000px) {
+        margin: 25px 0;
+        font-size: 1.7em;
+    }
+}
+.ServicesWrapper {
+    @include flexible(100%,row,space-between,center);
+}
+.Service {
+    @include flexible(100%,column,center,start);
+    width: 30%;
+    padding: 1.3em;
+    border-radius: 10px;
+    &:hover {
+        box-shadow: $ultralight-color 0px 5px 10px 0px;
+        cursor: pointer;
+    }
+}
+.H3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 25px;
+}
+.ServiceIcon {
+    @include flexible(100%,row,center,center);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    & img {
+        width: 60%;
+    }
+}
+.BlueIcon {
+    background-color: $button-bg;
+}
+.GreenIcon {
+    background-color: $frontend-icon;
+}
+.RedIcon {
+    background-color: $hightlight-color;
+}
+.ServiceButton {
+    border-radius: .5em;
+    padding: 10px 20px;
+    font-size: .8em;
+    font-weight: 500;
+    color: $light-color;
+    background-color: $service-button-bg;
+}
+.isActive {
+    color: $button-text;
+    background-color: $button-bg;
+}
+

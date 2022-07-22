@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <link rel="icon" href="assets/devchallenges.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Devchallenges</title>
+<body class="Body">
+    <header class="Header">
+        <p class="HeaderLogo"><a href="#">Edie</a></p>
+        <div class="MenuResponsive">
+            <input type="checkbox" id="CheckMenu" name="CheckMenu" class="CheckMenu">
+            <label for="CheckMenu" class="LabelMenu"></label>
+            <nav class="MenuContainer">
+                <ul class="Menu">
+                    <li class="MenuElem"><a href="#">Home</a></li>
+                    <li class="MenuElem"><a href="#services">Services</a></li>
+                    <li class="MenuElem"><a href="#">Our Works</a></li>
+                    <li class="MenuElem"><a href="#">Clients</a></li>
+                    <li class="MenuElem"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="MenuDesktop">
+            <li class="MenuElem"><a href="#">Home</a></li>
+            <li class="MenuElem"><a href="#services">Services</a></li>
+            <li class="MenuElem"><a href="#">Our Works</a></li>
+            <li class="MenuElem"><a href="#">Clients</a></li>
+            <li class="MenuElem"><a href="#">Contact</a></li>
+        </div>
+    </header>
+    <section class="WeCreate">
+        <header class="SectionHeader">
+            <p class="CTA">Unhappy with your website?</p>
+            <h1 class="H1">We create beautiful and fast web services</h1>
+        </header>
+        <picture class="HeroImage" title="Edie">
+            <source srcset="assets/heroImage-min.jpg" media="(min-width: 1000px)">
+            <img src="assets/heroImage-small-min.jpg" alt="Edie at work">
+        </picture>
+        <h2 class="H2">Story, emotion and purpose</h2>
+        <p class="Paragraph">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+
+        <form class="EmailCTA">
+            <p class="CTAText">Want us to contact you?</p>
+            <div class="InputWrapper">
+                <input class="CTAInput" type="email" placeholder="Email" required>
+                <button class="CTAButton">Join</button>
+            </div>
+        </form>
+    </section>
+    <section class="Services" id="services">
+        <header class="ServicesHeader">
+            <h2 class="ServicesH2">We offer high demand services</h2>
+        </header>
+        <div class="ServicesWrapper">
+            <div class="Service">
+                <div class="ServiceIcon BlueIcon">
+                    <img src="assets/edit.svg" alt="UI/UX Design" class="Icon">
+                </div>
+                <h3 class="H3">UI/UX Design</h3>
+                <p class="ServiceParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+                <button class="ServiceButton">Get started</button>
+            </div>
+            <div class="Service">
+                <div class="ServiceIcon GreenIcon">
+                    <img src="assets/code.svg" alt="Front End" class="Icon">
+                </div>
+                <h3 class="H3">Front End</h3>
+                <p class="ServiceParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+                <button class="ServiceButton isActive">Get started</button>
+            </div>
+            <div class="Service">
+                <div class="ServiceIcon RedIcon">
+                    <img src="assets/storage.svg" alt="Back End" class="Icon">
+                </div>
+                <h3 class="H3">Back End</h3>
+                <p class="ServiceParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+                <button class="ServiceButton">Get started</button>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
