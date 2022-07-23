@@ -7,6 +7,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Devchallenges</title>
+</head>
 <body class="Body">
     <header class="Header">
         <p class="HeaderLogo"><a href="#">Edie</a></p>
@@ -17,19 +18,21 @@
                 <ul class="Menu">
                     <li class="MenuElem"><a href="#">Home</a></li>
                     <li class="MenuElem"><a href="#services">Services</a></li>
-                    <li class="MenuElem"><a href="#">Our Works</a></li>
-                    <li class="MenuElem"><a href="#">Clients</a></li>
+                    <li class="MenuElem"><a href="#designs">Our Works</a></li>
+                    <li class="MenuElem"><a href="#testimonial">Clients</a></li>
                     <li class="MenuElem"><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="MenuDesktop">
-            <li class="MenuElem"><a href="#">Home</a></li>
-            <li class="MenuElem"><a href="#services">Services</a></li>
-            <li class="MenuElem"><a href="#">Our Works</a></li>
-            <li class="MenuElem"><a href="#">Clients</a></li>
-            <li class="MenuElem"><a href="#">Contact</a></li>
-        </div>
+        <nav class="MenuDesktop">
+            <ul>
+                <li class="MenuElem"><a href="#">Home</a></li>
+                <li class="MenuElem"><a href="#services">Services</a></li>
+                <li class="MenuElem"><a href="#designs">Our Works</a></li>
+                <li class="MenuElem"><a href="#testimonial">Clients</a></li>
+                <li class="MenuElem"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="WeCreate">
         <header class="SectionHeader">
@@ -42,7 +45,6 @@
         </picture>
         <h2 class="H2">Story, emotion and purpose</h2>
         <p class="Paragraph">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
-
         <form class="EmailCTA">
             <p class="CTAText">Want us to contact you?</p>
             <div class="InputWrapper">
@@ -82,7 +84,104 @@
             </div>
         </div>
     </section>
-
-
+    <section class="Designs" id="designs">
+        <header class="ServicesHeader">
+            <h2 class="ServicesH2">Good design means good business</h2>
+        </header>
+        <div class="DesignsWrapper">
+            <figure class="Design">
+                <picture title="Smart home dashboard">
+                    <source srcset="assets/smarthome-min.jpg" media="(min-width: 1000px)">
+                    <img class="DesignImg" src="assets/smarthome-small-min.jpg" alt="Smart home dashboard">
+                </picture>
+                <figcaption class="DesignCaption">Full stack application<span class="DesignTitle">Smart home dashboard</span></figcaption>
+            </figure>
+            <figure class="Design">
+                <picture title="Onboard application">
+                    <source srcset="assets/onboard-min.png" media="(min-width: 1000px)">
+                    <img class="DesignImg" src="assets/onboard-small-min.png" alt="Onboard application">
+                </picture>
+                <figcaption class="DesignCaption">UX/UI design<span class="DesignTitle">Onboard application</span></figcaption>
+            </figure>
+            <figure class="Design">
+                <picture title="Booking system">
+                    <source srcset="assets/booking-min.png" media="(min-width: 1000px)">
+                    <img class="DesignImg" src="assets/booking-small-min.png" alt="Booking system">
+                </picture>
+                <figcaption class="DesignCaption">Mobile application<span class="DesignTitle">Booking system</span></figcaption>
+            </figure>
+            <figure class="Design">
+                <picture title="Juice product homepage">
+                    <source srcset="assets/juice-product-min.png" media="(min-width: 1000px)">
+                    <img class="DesignImg" src="assets/juice-product-small-min.png" alt="Juice product homepage">
+                </picture>
+                <figcaption class="DesignCaption">Front End application<span class="DesignTitle">Juice product homepage</span></figcaption>
+            </figure>
+        </div>
+        <a href="#" class="SeeMore">See more&nbsp;&nbsp;&nbsp;&nbsp;⟶</a>
+    </section>
+    <section class="Team">
+        <header class="TeamContent">
+            <p class="TeamCTA">Meet the team</p>
+            <h2 class="ServicesH2">We are chilled and a laidback team</h2>
+            <p class="ServiceParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+        </header>
+        <picture class="TeamBigImg" title="Team member">
+            <source srcset="assets/person3-min.png" media="(min-width: 1000px)">
+            <img src="assets/person3-small-min.png" alt="Team member">
+        </picture>
+        <div class="TeamFaces">
+            <picture class="TeamSmallImg" title="Team member">
+                <source srcset="assets/person1-min.png" media="(min-width: 1000px)">
+                <img src="assets/person1-small-min.png" alt="Team member">
+            </picture>
+            <picture class="TeamBigImg" title="Team member">
+                <source srcset="assets/person2-min.png" media="(min-width: 1000px)">
+                <img src="assets/person2-small-min.png" alt="Team member">
+            </picture>
+        </div>
+    </section>
+    <section class="Testimonial" id="testimonial">
+        <header class="TestimonialHeader">
+            <h2 class="ServicesH2">“Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.”    </h2>
+        </header>
+        <div class="ClientCard">
+            <picture class="ClientPortrait" title="Client">
+                <source srcset="assets/person4-min.png" media="(min-width: 1000px)">
+                <img src="assets/person4-small-min.png" alt="Client">
+            </picture>
+            <div class="ClientID">
+                <p class="ClientName">Carlos Tran</p>
+                <p class="ClientCompany">The Decorate Gatsby</p>
+            </div>
+        </div>
+    </section>
+    <footer class="Footer">
+        <nav>
+            <ul class="FooterMenu">
+                <li class="MenuElem"><a href="#">Home</a></li>
+                <li class="MenuElem"><a href="#services">Services</a></li>
+                <li class="MenuElem"><a href="#designs">Our Works</a></li>
+                <li class="MenuElem"><a href="#testimonial">Clients</a></li>
+                <li class="MenuElem"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="Company">
+            <p class="HeaderLogo"><a href="#">Edie</a></p>
+            <div class="Social">
+                <a href="#"><img class="SocialImg" src="assets/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img class="SocialImg" src="assets/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="SocialImg" src="assets/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+        <form class="FooterEmailCTA">
+            <p class="CTAText">Want us to contact you?</p>
+            <div class="InputWrapper">
+                <input class="CTAInput" type="email" placeholder="Email" required>
+                <button class="CTAButton">Join</button>
+            </div>
+        </form>
+        <p class="Footer-p">created by <a href="https://github.com/sergio-atreides" class="Footer-a" target="_blank">Sergio Atreides</a> - devChallenges.io</p>
+    </footer>
 </body>
 </html>
